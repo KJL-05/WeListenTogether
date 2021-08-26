@@ -1,1 +1,0 @@
-"G:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e dbof-listen-together-9br5a8c0016 --n quickstartFunctions --r --project "E:\OneDrive\桌面\code\一起听歌.部分页面" --report
