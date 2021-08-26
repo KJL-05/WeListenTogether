@@ -1,0 +1,33 @@
+<!-- <button type="primary" bindtap="seekTest">跳转测试</button> -->
+<view class="songDetailContainer">
+  <view class="author">{{song.ar[0].name}}</view>
+  <view class="circle"></view>
+  <image class="needle {{isPlay && 'needleRotate'}}" src="https://6462-dbof-listen-together-9br5a8c0016-1306708025.tcb.qcloud.la/needle.png?sign=c7a976590001e6ac1a85f42926ec086e&t=1628217313"></image>
+
+  <view class="discContainer {{isPlay && 'discAnimation'}}">
+    <image class="disc" src="https://6462-dbof-listen-together-9br5a8c0016-1306708025.tcb.qcloud.la/disc.png?sign=d17545b4773c354fe55160890e5245e6&t=1628217400"></image>
+    <image class="musicImg" src="{{song.al.picUrl}}"></image>
+  </view>
+
+  <!-- 进度条控制区域 -->
+  <view class="progressControl">
+    <text>{{currentTime}}</text>
+    <!-- 总进度条 -->
+    <view class="barControl">
+      <!-- 实时进度条 -->
+      <view class="audio-currentTime-Bar" style="width: {{currentWidth + 'rpx'}}">
+        <!-- 小圆球 -->
+        <view class="audio-circle"></view>
+      </view>
+    </view>
+    <text>{{durationTime}}</text>
+  </view>
+  <!-- 底部控制播放区域 -->
+  <view class="musicControl">
+    <text class="iconfont {{isPlay?'icon-zanting': 'icon-shipintongbu'}} big" bindtap="handleClick"></text>
+  </view>
+  <view class="alert">
+      <text class="message1">{{message1}} </text>
+      <text class="message2">{{message2}} </text>
+  </view>
+</view>

@@ -1,0 +1,67 @@
+
+<view class="groupContainer">
+
+
+  <!-- <view class="topFun">
+    <text class="iconfont icon-sousuo"></text>
+  </view> -->
+  <!-- <icon class="iconfont icon-sousuo"></icon> -->
+
+  <view class="topFun">
+    <text class="iconfont icon-sousuo1"></text>
+
+    <view class="topSearchBar">
+      <!-- 搜索框 -->
+      <view class="topSearchBar_box">
+        <!-- <icon class="weui-icon-search_in-box" type="search" size="14"></icon> -->
+        <!-- <icon class="topSearchBar_box_icon icon-sousuo" ></icon> -->
+        <input type="number" bindinput="oninput" class="weui-search-bar__input" placeholder="您可以输入小组编号进行搜索" />
+      </view>
+    </view>
+    <!-- 搜索按钮,调用搜索查询方法 -->
+    <view class="weui-search-bar__cancel-btn" bindtap='serchByGrpId'>搜索</view>
+  </view>
+  <!-- 弹窗区 -->
+  <view class='pop_up_Win_Container'>
+    <!-- 找到了小组 -->
+    <modal wx:if="{{isFinded}}" title="找到小组" hidden="{{modalHidden}}" bindconfirm="modalConfirm"
+      bindcancel="modalCandel">
+      <view class="resContainer" style="display: flex;flex-direction: row;">
+        <view class="imgContainer">
+          <image style="width:150rpx;height:150rpx" class="image" src="{{groupInfo[0].leaderAvatarUrl}}"
+            mode='aspectFill'></image>
+        </view>
+        <view class="textContainer" style="display: flex;flex-direction: column;">
+          <text class="leaderNick" style="margin: 30rpx auto auto 0;">{{groupInfo[0].leaderNickName}}</text>
+          <text class="grp_id" style="margin: auto auto 30rpx 0;">{{groupInfo[0].groupId}}</text>
+        </view>
+      </view>
+      <view>是否加入该小组</view>
+
+    </modal>
+    <!-- 没有找到小组 -->
+    <modal wx:else title="未找到小组" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+      <view>很抱歉，没有找到您要找的小组</view>
+    </modal>
+  </view>
+
+
+  <!-- 标题区 -->
+  <view class="title_bar">
+    <view class="title_bar_container">
+      <text class="leftlines">—</text>
+      <text class="title_content">小组列表</text>
+      <text class="rightlines">—</text>
+    </view>
+  </view>
+  <!-- 小组列表区 -->
+  <view class="groupList">
+    <view class="groupInfo" wx:for="{{groupList}}" wx:key="index">
+      <image src="{{item.leaderAvatarUrl}}"></image>
+      <text class="groupList_content">{{item.leaderNickName}}的小组编号:{{item.groupId}}</text>
+      <view class="icon_join">
+        <text class="iconfont icon-76xinzeng" bindtap="test" data-grpId="{{item.groupId}}"></text>
+      </view>
+    </view>
+  </view>
+</view>

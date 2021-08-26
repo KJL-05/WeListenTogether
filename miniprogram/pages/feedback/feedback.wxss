@@ -1,0 +1,80 @@
+page {
+  background-color: #F8F8F8;
+  height: 100%;
+}
+
+.problem-container {
+  margin: 30rpx 30rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* align-items: center; */
+}
+
+.content-box {
+  padding: 30rpx 30rpx;
+}
+
+.discription-box {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70rpx;
+}
+
+.discription-title-bar {
+  padding-bottom: 30rpx;
+  display: flex;
+}
+
+.discription-title {
+  flex: 1 0 auto;
+}
+
+.probleminput {
+  width: 100%;
+  height: 300rpx;
+  background-color: #F8F8F8;
+}
+
+.contactway-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactway-box text {
+  padding-bottom: 50rpx;
+}
+
+.contactwayinput {
+  height: 100rpx;
+  background-color: #F8F8F8;
+}
+
+.button-box {
+  margin: auto auto;
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  position: relative;
+  bottom: 10rpx;
+  background-color: #FDB8B7;
+}
+.button-box text{
+  font-size: 40rpx;
+}
+.button-box-active{
+  margin: auto auto;
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  position: relative;
+  bottom: 10rpx;
+  background-color: #FF5355;
+}

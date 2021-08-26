@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/fitstPage/firstPage",
+    "songPackage/pages/memberSongDetail/memberSongDetail",
+    "pages/aboutus/aboutus",
+    "pages/personal/personal",
+    "pages/feedback/feedback",
+    "pages/groupList/groupList",
+    "pages/webview/webview",
+    "songPackage/pages/recommendSong/recommendSong",
+    "pages/oprationtutorail/oprationtutorail",
+    "songPackage/pages/songDetail/songDetail",
+    "pages/login/login"
+    
+    ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d43c33",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/fitstPage/firstPage",
+        "text": "主页",
+        "iconPath": "/static/image/tab-home.png",
+        "selectedIconPath": "/static/image/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "/static/image/tab-my.png",
+        "selectedIconPath": "/static/image/tab-my-current.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": ["audio"]
+
+}

@@ -1,0 +1,33 @@
+<view class="aboutus-container">
+  <!-- 头部logo区 -->
+  <view class="head-logo">
+    <image class="" src="../../static/image/logo.png"></image>
+
+  </view>
+  <!-- 相关信息区 -->
+  <view class="aubotus-box">
+
+    <!-- 项目小组 -->
+    <view class="aboutus-team">
+      <text class="team-name">We！一起听</text>
+    </view>
+    <!-- 成员头像，昵称 -->
+    <view class="memInfo-container">
+      <scroll-view scroll-x="true" class="memInfo-scroll-container">
+        <view class="member-box">
+          <view class="memInfo" wx:for="{{memInfo}}" wx:key="index">
+            <image src="{{item.avatarUrl?item.avatarUrl:'../../static/image/missing-face.png'}}"></image>
+            <text class="memNickname">{{item.nickName}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 商务合作 -->
+  <view class="business-container">
+    <!-- content -->
+    <view class="business-content">商务合作</view>
+    <view class="business-telnum">18840801092</view>
+  </view>
+
+</view>

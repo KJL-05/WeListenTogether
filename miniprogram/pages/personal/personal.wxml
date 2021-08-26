@@ -1,0 +1,37 @@
+<image class="topBack" src="../../static/image/wangyiyunbackground.png"></image>
+<view class="personContainer">
+  <view class="wyyInfo-box">
+    <view class="portrait-box">
+      <image class="portrait" bindtap="wangyiAvatar" src="{{wangyiUserinfo.avatarUrl?wangyiUserinfo.avatarUrl:'../../static/image/missing-face.png'}}"></image>
+    </view>
+    <view class="info-box">
+      <text class="username">{{wangyiUserinfo.nickname?wangyiUserinfo.nickname: '游客'}}</text>
+    </view>
+  </view>
+  <view class="wxInfo-box">
+    <view class="wxavatar-box">
+      <!-- <image class="wxavatar" src="{{weixinUserinfo.avatarUrl}}"></image> -->
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="nickname-box">
+      <!-- <text class="nickname">{{weixinUserinfo.nickName}}</text> -->
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+  <view class="programInfo-container">
+    <view class="programInfo-box">
+      <view class="question-box" bindtap="toFeedback" >
+        <text class="iconfont icon-wentifankui"></text>
+        <text class="content">问题反馈</text>
+        <text class="rightarr">></text>
+      </view>
+      <view class="br-box"></view>
+      <view class="aboutus-box" bindtap="toAboutus">
+        <text class="iconfont icon-about"></text>
+        <text class="content">关于我们</text>
+        <text class="rightarr">></text>
+      </view>
+    </view>
+  </view>
+
+</view>

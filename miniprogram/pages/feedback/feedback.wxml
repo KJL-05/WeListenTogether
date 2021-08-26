@@ -1,0 +1,26 @@
+<view class="problem-container">
+  <!-- 内容区 -->
+  <view class="content-box">
+    <!-- 问题描述区 -->
+    <view class="discription-box">
+      <!-- 标题 -->
+      <view class="discription-title-bar">
+        <text class="discription-title">详细描述</text>
+        <text class="discription-charnum">{{discraption.length}}/5000</text>
+      </view>
+      <!-- 输入 -->
+      <textarea bindinput="discraptionInput" class="probleminput" type="text" placeholder="请补充描述你遇到的问题" maxlength="5000" ></textarea>
+    </view>
+    <!-- 联系方式区 -->
+    <view class="contactway-box">
+      <!-- 标题 -->
+      <text>联系方式</text>
+      <!-- 输入 -->
+      <input bindinput="getContactWay" class="contactwayinput" type="text" placeholder="请输入手机号/微信/QQ/邮箱等" />
+    </view>
+  </view>
+  <!-- 按钮区 -->
+  <view class="{{discraption?'button-box-active':'button-box'}}" bindtap="postProblem">
+  <text>提交</text>
+  </view>
+</view>

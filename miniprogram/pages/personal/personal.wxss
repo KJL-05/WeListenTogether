@@ -1,0 +1,98 @@
+/* pages/personal/personal.wxss */
+.topBack {
+  position: absolute;
+  top: -350rpx;
+  border-bottom: 1rpx solid #a40011;
+  border-radius: 10%;
+  width: 100%;
+}
+
+page {
+  background-color: #F4F3F8;
+}
+
+.wyyInfo-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.wyyInfo-box .portrait-box {
+  margin-top: 70rpx;
+  
+}
+
+.wyyInfo-box .portrait-box image {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+}
+
+.wxInfo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wxInfo-box .wxavatar-box {
+  margin-top: 70rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.wxInfo-box .wxavatar-box .wxavatar {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.programInfo-container {
+  margin: 30rpx 30rpx;
+  background-color: white;
+  border: 1rpx solid white;
+  border-radius: 50rpx;
+  font-size: 50rpx;
+  padding-left: 30rpx;
+  height: 200rpx;
+}
+
+.programInfo-container .portrait-box {
+
+  display: flex;
+}
+.question-box .iconfont{
+  font-size: 50rpx;
+}
+
+.iconfont {
+  width: 30rpx;
+}
+
+.programInfo-box .question-box {
+  padding-top: 15rpx;
+  padding-bottom: 8rpx;
+}
+
+.programInfo-box .aboutus-box {
+  padding-top: 15rpx;
+  padding-bottom: 8rpx;
+}
+
+.content {
+  width: 100%;
+  padding-top: 10rpx;
+  padding-left: 50rpx;
+  padding-bottom: 10rpx;
+}
+
+.rightarr {
+  float: right;
+  margin-right: 50rpx;
+}
+.br-box{
+  margin-left: 65rpx;
+  margin-right: 60rpx;
+  height: 7rpx;
+  background-color:#eeeeee ;
+}

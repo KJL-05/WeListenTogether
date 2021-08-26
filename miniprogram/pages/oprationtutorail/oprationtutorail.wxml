@@ -1,0 +1,13 @@
+<view class="tutorail-container">
+  <view class="tutorail-box">
+    <view bindtap="changeImageIndex" id="1" class="pre-image">
+      <text class="iconfont icon-next"></text>
+    </view>
+    <view class="tutourail-image">
+    <image mode="widthFix"  src="{{currentImage}}"></image>
+    </view>
+    <view bindtap="changeImageIndex" id="2" class="next-image">
+      <text class="iconfont icon-shangyige"></text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+<!-- 轮播图区域 -->
+<swiper class="banners" indicator-dots indicator-color='ivory' indicator-active-color='#d43c33'>
+  <swiper-item wx:for="{{bannerList}}" wx:key="bannerId" wx:if="{{item.url}}">
+    <image src="{{item.pic}}" bindtap="bannerToWeb" data-url="{{item.url}}"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 总功能区 -->
+<view class="navContainer">
+  <!-- 左 -->
+  <view class="left_block">
+    <view class="grpInfoitem" wx:if="{{isLeader}}">
+      <text>您的小组编号为：{{groupId}}</text>
+      <test>您是组长</test>
+    </view>
+    <view class="grpInfoitem" wx:elif="{{isMember}}">
+      <text>您的小组编号为：{{groupId}}</text>
+      <test>您是组员</test>
+    </view>
+    <view class="grpInfoitem" wx:else>
+      <text>您还未创建或加入过小组</text>
+    </view>
+    <view class="personalContent">
+        <text class="title">最近播放</text>
+        <!-- 最近播放记录 -->
+        <scroll-view wx:if="{{recentPlayList.length}}" scroll-y class="recentScroll" enable-flex>
+          <view class="recentItem" wx:for="{{recentPlayList}}" wx:key="{{id}}">
+            <view class="image">
+              <image src="{{item.song.al.picUrl}}"></image>
+            </view>
+            <view class="detail">
+              <text class="song">{{item.song.al.name}}</text>
+              <text class="songer">{{item.song.ar[0].name}}</text>
+            </view>
+          </view>
+        </scroll-view>
+        <view wx:else>暂无播放记录</view>
+     
+    </view>
+  </view>
+  <!-- 右 -->
+  <view class="right_block">
+    <!-- 使用教程 -->
+    <view class="grpItem" bindtap="toOprationTutorail" >
+      <text class="iconfont icon-weibiaoti1"></text>
+      <text>使用教程</text>
+    </view>
+    <!-- 选择歌曲 -->
+    <view class="grpItem" bindtap="toRecommendSong">
+      <text class="iconfont icon-songlist-01"></text>
+      <text class="word">选择歌曲</text>
+    </view>
+    <!-- 加入小组 -->
+    <view class="grpItem" bindtap="joinGroup">
+      <text class="iconfont icon-76xinzeng"></text>
+      <text>加入小组</text>
+    </view>
+    <!--  创建小组 -->
+    <view class="grpItem" bindtap="creatGroup">
+      <text class="iconfont icon-weibiaoti1"></text>
+      <text>创建小组</text>
+    </view>
+  </view>
+</view>
+
+  
